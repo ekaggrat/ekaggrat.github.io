@@ -1,0 +1,16 @@
+<wpml-config>
+    <custom-types>
+        <custom-type translate="1">portfolio_page</custom-type>
+        <custom-type translate="1">testimonials</custom-type>
+        <custom-type translate="1">slides</custom-type>
+        <custom-type translate="1">carousels</custom-type>
+    </custom-types>
+    <taxonomies>
+        <taxonomy translate="1">portfolio_category</taxonomy>
+        <taxonomy translate="1">testimonials_category</taxonomy>
+        <taxonomy translate="1">slides_category</taxonomy>
+        <taxonomy translate="1">carousels_category</taxonomy>
+    </taxonomies>
+</wpml-config>
+
+
