@@ -12,7 +12,6 @@
 </head>
 <body class="bg-white text-black">
     
-    <!-- Navigation / Header -->
     <header class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-sm z-50 py-6 px-8 flex justify-between items-center border-b border-gray-100">
         <div class="text-2xl font-semibold tracking-[0.2em] uppercase">
             Ekaggrat
@@ -30,262 +29,519 @@
             Selected Works
         </h1>
         
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-16 gap-x-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-3">
 
-            <!-- Image Item -->
-            <div class="group cursor-pointer" onclick="openModal('images/bio_qianyan_1.jpg', 'BIO QIANYAN 1')">
-                <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100 mb-4">
+            <a href="cultural center.html" class="group block cursor-pointer">
+                <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
-                        src="images/bio_qianyan_1.jpg" 
-                        alt="bio qianyan 1" 
-                        class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                        src="images/cultural center.jpg" 
+                        alt="cultural center" 
+                        class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
                     >
-                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500"></div>
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-500"></div>
+                    
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <h2 class="text-white text-lg font-semibold tracking-widest uppercase text-center px-4">CULTURAL CENTER</h2>
+                    </div>
                 </div>
-                <div class="flex flex-col space-y-1">
-                    <h2 class="text-sm font-semibold tracking-widest uppercase group-hover:text-gray-600 transition-colors">BIO QIANYAN 1</h2>
-                    <p class="text-[10px] text-gray-400 tracking-widest uppercase">Architecture</p>
-                </div>
-            </div>
+            </a>
 
-            <!-- Image Item -->
-            <div class="group cursor-pointer" onclick="openModal('images/bio_qianyan_10.jpg', 'BIO QIANYAN 10')">
-                <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100 mb-4">
+            <a href="cloud facade.html" class="group block cursor-pointer">
+                <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
-                        src="images/bio_qianyan_10.jpg" 
-                        alt="bio qianyan 10" 
-                        class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                        src="images/cloud facade.jpg" 
+                        alt="cloud facade" 
+                        class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
                     >
-                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500"></div>
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-500"></div>
+                    
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <h2 class="text-white text-lg font-semibold tracking-widest uppercase text-center px-4">CLOUD FACADE</h2>
+                    </div>
                 </div>
-                <div class="flex flex-col space-y-1">
-                    <h2 class="text-sm font-semibold tracking-widest uppercase group-hover:text-gray-600 transition-colors">BIO QIANYAN 10</h2>
-                    <p class="text-[10px] text-gray-400 tracking-widest uppercase">Photography</p>
-                </div>
-            </div>
+            </a>
 
-            <!-- Image Item -->
-            <div class="group cursor-pointer" onclick="openModal('images/bio_qianyan_11.jpg', 'BIO QIANYAN 11')">
-                <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100 mb-4">
+            <a href="shenyang clubhouse.html" class="group block cursor-pointer">
+                <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
-                        src="images/bio_qianyan_11.jpg" 
-                        alt="bio qianyan 11" 
-                        class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                        src="images/shenyang clubhouse.jpg" 
+                        alt="shenyang clubhouse" 
+                        class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
                     >
-                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500"></div>
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-500"></div>
+                    
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <h2 class="text-white text-lg font-semibold tracking-widest uppercase text-center px-4">SHENYANG CLUBHOUSE</h2>
+                    </div>
                 </div>
-                <div class="flex flex-col space-y-1">
-                    <h2 class="text-sm font-semibold tracking-widest uppercase group-hover:text-gray-600 transition-colors">BIO QIANYAN 11</h2>
-                    <p class="text-[10px] text-gray-400 tracking-widest uppercase">Interior</p>
-                </div>
-            </div>
+            </a>
 
-            <!-- Image Item -->
-            <div class="group cursor-pointer" onclick="openModal('images/bio_qianyan_12.jpg', 'BIO QIANYAN 12')">
-                <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100 mb-4">
+            <a href="torlo.html" class="group block cursor-pointer">
+                <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
-                        src="images/bio_qianyan_12.jpg" 
-                        alt="bio qianyan 12" 
-                        class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                        src="images/torlo.jpg" 
+                        alt="torlo" 
+                        class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
                     >
-                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500"></div>
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-500"></div>
+                    
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <h2 class="text-white text-lg font-semibold tracking-widest uppercase text-center px-4">TORLO</h2>
+                    </div>
                 </div>
-                <div class="flex flex-col space-y-1">
-                    <h2 class="text-sm font-semibold tracking-widest uppercase group-hover:text-gray-600 transition-colors">BIO QIANYAN 12</h2>
-                    <p class="text-[10px] text-gray-400 tracking-widest uppercase">Design</p>
-                </div>
-            </div>
+            </a>
 
-            <!-- Image Item -->
-            <div class="group cursor-pointer" onclick="openModal('images/bio_qianyan_2.jpg', 'BIO QIANYAN 2')">
-                <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100 mb-4">
+            <a href="edgytokie.html" class="group block cursor-pointer">
+                <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
-                        src="images/bio_qianyan_2.jpg" 
-                        alt="bio qianyan 2" 
-                        class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                        src="images/edgytokie.jpg" 
+                        alt="edgytokie" 
+                        class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
                     >
-                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500"></div>
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-500"></div>
+                    
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <h2 class="text-white text-lg font-semibold tracking-widest uppercase text-center px-4">EDGYTOKIE</h2>
+                    </div>
                 </div>
-                <div class="flex flex-col space-y-1">
-                    <h2 class="text-sm font-semibold tracking-widest uppercase group-hover:text-gray-600 transition-colors">BIO QIANYAN 2</h2>
-                    <p class="text-[10px] text-gray-400 tracking-widest uppercase">Visuals</p>
-                </div>
-            </div>
+            </a>
 
-            <!-- Image Item -->
-            <div class="group cursor-pointer" onclick="openModal('images/bio_qianyan_3.jpg', 'BIO QIANYAN 3')">
-                <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100 mb-4">
+            <a href="getula.html" class="group block cursor-pointer">
+                <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
-                        src="images/bio_qianyan_3.jpg" 
-                        alt="bio qianyan 3" 
-                        class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                        src="images/getula.jpg" 
+                        alt="getula" 
+                        class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
                     >
-                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500"></div>
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-500"></div>
+                    
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <h2 class="text-white text-lg font-semibold tracking-widest uppercase text-center px-4">GETULA</h2>
+                    </div>
                 </div>
-                <div class="flex flex-col space-y-1">
-                    <h2 class="text-sm font-semibold tracking-widest uppercase group-hover:text-gray-600 transition-colors">BIO QIANYAN 3</h2>
-                    <p class="text-[10px] text-gray-400 tracking-widest uppercase">Architecture</p>
-                </div>
-            </div>
+            </a>
 
-            <!-- Image Item -->
-            <div class="group cursor-pointer" onclick="openModal('images/bio_qianyan_4.jpg', 'BIO QIANYAN 4')">
-                <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100 mb-4">
+            <a href="biocity.html" class="group block cursor-pointer">
+                <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
-                        src="images/bio_qianyan_4.jpg" 
-                        alt="bio qianyan 4" 
-                        class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                        src="images/biocity.jpg" 
+                        alt="biocity" 
+                        class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
                     >
-                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500"></div>
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-500"></div>
+                    
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <h2 class="text-white text-lg font-semibold tracking-widest uppercase text-center px-4">BIOCITY</h2>
+                    </div>
                 </div>
-                <div class="flex flex-col space-y-1">
-                    <h2 class="text-sm font-semibold tracking-widest uppercase group-hover:text-gray-600 transition-colors">BIO QIANYAN 4</h2>
-                    <p class="text-[10px] text-gray-400 tracking-widest uppercase">Photography</p>
-                </div>
-            </div>
+            </a>
 
-            <!-- Image Item -->
-            <div class="group cursor-pointer" onclick="openModal('images/bio_qianyan_5.5.jpg', 'BIO QIANYAN 5.5')">
-                <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100 mb-4">
+            <a href="sequino.html" class="group block cursor-pointer">
+                <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
-                        src="images/bio_qianyan_5.5.jpg" 
-                        alt="bio qianyan 5.5" 
-                        class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                        src="images/sequino.jpg" 
+                        alt="sequino" 
+                        class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
                     >
-                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500"></div>
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-500"></div>
+                    
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <h2 class="text-white text-lg font-semibold tracking-widest uppercase text-center px-4">SEQUINO</h2>
+                    </div>
                 </div>
-                <div class="flex flex-col space-y-1">
-                    <h2 class="text-sm font-semibold tracking-widest uppercase group-hover:text-gray-600 transition-colors">BIO QIANYAN 5.5</h2>
-                    <p class="text-[10px] text-gray-400 tracking-widest uppercase">Interior</p>
-                </div>
-            </div>
+            </a>
 
-            <!-- Image Item -->
-            <div class="group cursor-pointer" onclick="openModal('images/bio_qianyan_5.jpg', 'BIO QIANYAN 5')">
-                <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100 mb-4">
+            <a href="factory sports center.html" class="group block cursor-pointer">
+                <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
-                        src="images/bio_qianyan_5.jpg" 
-                        alt="bio qianyan 5" 
-                        class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                        src="images/factory sports center.jpg" 
+                        alt="factory sports center" 
+                        class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
                     >
-                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500"></div>
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-500"></div>
+                    
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <h2 class="text-white text-lg font-semibold tracking-widest uppercase text-center px-4">FACTORY SPORTS CENTER</h2>
+                    </div>
                 </div>
-                <div class="flex flex-col space-y-1">
-                    <h2 class="text-sm font-semibold tracking-widest uppercase group-hover:text-gray-600 transition-colors">BIO QIANYAN 5</h2>
-                    <p class="text-[10px] text-gray-400 tracking-widest uppercase">Design</p>
-                </div>
-            </div>
+            </a>
 
-            <!-- Image Item -->
-            <div class="group cursor-pointer" onclick="openModal('images/bio_qianyan_6.jpg', 'BIO QIANYAN 6')">
-                <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100 mb-4">
+            <a href="tj cec office.html" class="group block cursor-pointer">
+                <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
-                        src="images/bio_qianyan_6.jpg" 
-                        alt="bio qianyan 6" 
-                        class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                        src="images/tj cec office.jpg" 
+                        alt="tj cec office" 
+                        class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
                     >
-                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500"></div>
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-500"></div>
+                    
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <h2 class="text-white text-lg font-semibold tracking-widest uppercase text-center px-4">TJ CEC OFFICE</h2>
+                    </div>
                 </div>
-                <div class="flex flex-col space-y-1">
-                    <h2 class="text-sm font-semibold tracking-widest uppercase group-hover:text-gray-600 transition-colors">BIO QIANYAN 6</h2>
-                    <p class="text-[10px] text-gray-400 tracking-widest uppercase">Visuals</p>
-                </div>
-            </div>
+            </a>
 
-            <!-- Image Item -->
-            <div class="group cursor-pointer" onclick="openModal('images/bio_qianyan_7.5.jpg', 'BIO QIANYAN 7.5')">
-                <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100 mb-4">
+            <a href="baotao.html" class="group block cursor-pointer">
+                <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
-                        src="images/bio_qianyan_7.5.jpg" 
-                        alt="bio qianyan 7.5" 
-                        class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                        src="images/baotao.jpg" 
+                        alt="baotao" 
+                        class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
                     >
-                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500"></div>
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-500"></div>
+                    
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <h2 class="text-white text-lg font-semibold tracking-widest uppercase text-center px-4">BAOTAO</h2>
+                    </div>
                 </div>
-                <div class="flex flex-col space-y-1">
-                    <h2 class="text-sm font-semibold tracking-widest uppercase group-hover:text-gray-600 transition-colors">BIO QIANYAN 7.5</h2>
-                    <p class="text-[10px] text-gray-400 tracking-widest uppercase">Architecture</p>
-                </div>
-            </div>
+            </a>
 
-            <!-- Image Item -->
-            <div class="group cursor-pointer" onclick="openModal('images/bio_qianyan_7.jpg', 'BIO QIANYAN 7')">
-                <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100 mb-4">
+            <a href="gungzhuo bus station.html" class="group block cursor-pointer">
+                <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
-                        src="images/bio_qianyan_7.jpg" 
-                        alt="bio qianyan 7" 
-                        class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                        src="images/gungzhuo bus station.jpg" 
+                        alt="gungzhuo bus station" 
+                        class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
                     >
-                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500"></div>
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-500"></div>
+                    
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <h2 class="text-white text-lg font-semibold tracking-widest uppercase text-center px-4">GUNGZHUO BUS STATION</h2>
+                    </div>
                 </div>
-                <div class="flex flex-col space-y-1">
-                    <h2 class="text-sm font-semibold tracking-widest uppercase group-hover:text-gray-600 transition-colors">BIO QIANYAN 7</h2>
-                    <p class="text-[10px] text-gray-400 tracking-widest uppercase">Photography</p>
-                </div>
-            </div>
+            </a>
 
-            <!-- Image Item -->
-            <div class="group cursor-pointer" onclick="openModal('images/bio_qianyan_9.5.jpg', 'BIO QIANYAN 9.5')">
-                <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100 mb-4">
+            <a href="scaffolding facade.html" class="group block cursor-pointer">
+                <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
-                        src="images/bio_qianyan_9.5.jpg" 
-                        alt="bio qianyan 9.5" 
-                        class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                        src="images/scaffolding facade.jpg" 
+                        alt="scaffolding facade" 
+                        class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
                     >
-                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500"></div>
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-500"></div>
+                    
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <h2 class="text-white text-lg font-semibold tracking-widest uppercase text-center px-4">SCAFFOLDING FACADE</h2>
+                    </div>
                 </div>
-                <div class="flex flex-col space-y-1">
-                    <h2 class="text-sm font-semibold tracking-widest uppercase group-hover:text-gray-600 transition-colors">BIO QIANYAN 9.5</h2>
-                    <p class="text-[10px] text-gray-400 tracking-widest uppercase">Interior</p>
-                </div>
-            </div>
+            </a>
 
-            <!-- Image Item -->
-            <div class="group cursor-pointer" onclick="openModal('images/bio_qianyan_9.6.jpg', 'BIO QIANYAN 9.6')">
-                <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100 mb-4">
+            <a href="biocity 1.html" class="group block cursor-pointer">
+                <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
-                        src="images/bio_qianyan_9.6.jpg" 
-                        alt="bio qianyan 9.6" 
-                        class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                        src="images/biocity 1.jpg" 
+                        alt="biocity 1" 
+                        class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
                     >
-                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500"></div>
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-500"></div>
+                    
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <h2 class="text-white text-lg font-semibold tracking-widest uppercase text-center px-4">BIOCITY 1</h2>
+                    </div>
                 </div>
-                <div class="flex flex-col space-y-1">
-                    <h2 class="text-sm font-semibold tracking-widest uppercase group-hover:text-gray-600 transition-colors">BIO QIANYAN 9.6</h2>
-                    <p class="text-[10px] text-gray-400 tracking-widest uppercase">Design</p>
-                </div>
-            </div>
+            </a>
 
-            <!-- Image Item -->
-            <div class="group cursor-pointer" onclick="openModal('images/bio_qianyan_9.jpg', 'BIO QIANYAN 9')">
-                <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100 mb-4">
+            <a href="vlink mall.html" class="group block cursor-pointer">
+                <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
-                        src="images/bio_qianyan_9.jpg" 
-                        alt="bio qianyan 9" 
-                        class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                        src="images/vlink mall.jpg" 
+                        alt="vlink mall" 
+                        class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
                     >
-                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500"></div>
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-500"></div>
+                    
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <h2 class="text-white text-lg font-semibold tracking-widest uppercase text-center px-4">VLINK MALL</h2>
+                    </div>
                 </div>
-                <div class="flex flex-col space-y-1">
-                    <h2 class="text-sm font-semibold tracking-widest uppercase group-hover:text-gray-600 transition-colors">BIO QIANYAN 9</h2>
-                    <p class="text-[10px] text-gray-400 tracking-widest uppercase">Visuals</p>
+            </a>
+
+            <a href="holo clock.html" class="group block cursor-pointer">
+                <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
+                    <img 
+                        src="images/holo clock.JPG" 
+                        alt="holo clock" 
+                        class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
+                        onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
+                    >
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-500"></div>
+                    
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <h2 class="text-white text-lg font-semibold tracking-widest uppercase text-center px-4">HOLO CLOCK</h2>
+                    </div>
                 </div>
-            </div>
+            </a>
+
+            <a href="entrance gate.html" class="group block cursor-pointer">
+                <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
+                    <img 
+                        src="images/entrance gate.jpg" 
+                        alt="entrance gate" 
+                        class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
+                        onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
+                    >
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-500"></div>
+                    
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <h2 class="text-white text-lg font-semibold tracking-widest uppercase text-center px-4">ENTRANCE GATE</h2>
+                    </div>
+                </div>
+            </a>
+
+            <a href="doodle1.html" class="group block cursor-pointer">
+                <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
+                    <img 
+                        src="images/doodle1.jpg" 
+                        alt="doodle1" 
+                        class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
+                        onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
+                    >
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-500"></div>
+                    
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <h2 class="text-white text-lg font-semibold tracking-widest uppercase text-center px-4">DOODLE1</h2>
+                    </div>
+                </div>
+            </a>
+
+            <a href="zephyr reception.html" class="group block cursor-pointer">
+                <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
+                    <img 
+                        src="images/zephyr reception.jpg" 
+                        alt="zephyr reception" 
+                        class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
+                        onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
+                    >
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-500"></div>
+                    
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <h2 class="text-white text-lg font-semibold tracking-widest uppercase text-center px-4">ZEPHYR RECEPTION</h2>
+                    </div>
+                </div>
+            </a>
+
+            <a href="tian office.html" class="group block cursor-pointer">
+                <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
+                    <img 
+                        src="images/tian office.jpg" 
+                        alt="tian office" 
+                        class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
+                        onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
+                    >
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-500"></div>
+                    
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <h2 class="text-white text-lg font-semibold tracking-widest uppercase text-center px-4">TIAN OFFICE</h2>
+                    </div>
+                </div>
+            </a>
+
+            <a href="zebra interior.html" class="group block cursor-pointer">
+                <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
+                    <img 
+                        src="images/zebra interior.jpg" 
+                        alt="zebra interior" 
+                        class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
+                        onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
+                    >
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-500"></div>
+                    
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <h2 class="text-white text-lg font-semibold tracking-widest uppercase text-center px-4">ZEBRA INTERIOR</h2>
+                    </div>
+                </div>
+            </a>
+
+            <a href="wuhan masterplan.html" class="group block cursor-pointer">
+                <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
+                    <img 
+                        src="images/wuhan masterplan.jpg" 
+                        alt="wuhan masterplan" 
+                        class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
+                        onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
+                    >
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-500"></div>
+                    
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <h2 class="text-white text-lg font-semibold tracking-widest uppercase text-center px-4">WUHAN MASTERPLAN</h2>
+                    </div>
+                </div>
+            </a>
+
+            <a href="traffic office.html" class="group block cursor-pointer">
+                <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
+                    <img 
+                        src="images/traffic office.jpg" 
+                        alt="traffic office" 
+                        class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
+                        onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
+                    >
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-500"></div>
+                    
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <h2 class="text-white text-lg font-semibold tracking-widest uppercase text-center px-4">TRAFFIC OFFICE</h2>
+                    </div>
+                </div>
+            </a>
+
+            <a href="reception center quinion.html" class="group block cursor-pointer">
+                <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
+                    <img 
+                        src="images/reception center quinion.jpg" 
+                        alt="reception center quinion" 
+                        class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
+                        onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
+                    >
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-500"></div>
+                    
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <h2 class="text-white text-lg font-semibold tracking-widest uppercase text-center px-4">RECEPTION CENTER QUINION</h2>
+                    </div>
+                </div>
+            </a>
+
+            <a href="gas station.html" class="group block cursor-pointer">
+                <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
+                    <img 
+                        src="images/gas station.jpg" 
+                        alt="gas station" 
+                        class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
+                        onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
+                    >
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-500"></div>
+                    
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <h2 class="text-white text-lg font-semibold tracking-widest uppercase text-center px-4">GAS STATION</h2>
+                    </div>
+                </div>
+            </a>
+
+            <a href="outdoor cafe.html" class="group block cursor-pointer">
+                <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
+                    <img 
+                        src="images/outdoor cafe.jpg" 
+                        alt="outdoor cafe" 
+                        class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
+                        onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
+                    >
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-500"></div>
+                    
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <h2 class="text-white text-lg font-semibold tracking-widest uppercase text-center px-4">OUTDOOR CAFE</h2>
+                    </div>
+                </div>
+            </a>
+
+            <a href="eco center.html" class="group block cursor-pointer">
+                <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
+                    <img 
+                        src="images/eco center.jpg" 
+                        alt="eco center" 
+                        class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
+                        onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
+                    >
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-500"></div>
+                    
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <h2 class="text-white text-lg font-semibold tracking-widest uppercase text-center px-4">ECO CENTER</h2>
+                    </div>
+                </div>
+            </a>
+
+            <a href="taiyuan mall .html" class="group block cursor-pointer">
+                <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
+                    <img 
+                        src="images/taiyuan mall .jpg" 
+                        alt="taiyuan mall " 
+                        class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
+                        onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
+                    >
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-500"></div>
+                    
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <h2 class="text-white text-lg font-semibold tracking-widest uppercase text-center px-4">TAIYUAN MALL </h2>
+                    </div>
+                </div>
+            </a>
+
+            <a href="yuanguan  tower.html" class="group block cursor-pointer">
+                <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
+                    <img 
+                        src="images/yuanguan  tower.jpg" 
+                        alt="yuanguan  tower" 
+                        class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
+                        onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
+                    >
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-500"></div>
+                    
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <h2 class="text-white text-lg font-semibold tracking-widest uppercase text-center px-4">YUANGUAN  TOWER</h2>
+                    </div>
+                </div>
+            </a>
+
+            <a href="precast factory office .html" class="group block cursor-pointer">
+                <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
+                    <img 
+                        src="images/precast factory office .jpg" 
+                        alt="precast factory office " 
+                        class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
+                        onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
+                    >
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-500"></div>
+                    
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <h2 class="text-white text-lg font-semibold tracking-widest uppercase text-center px-4">PRECAST FACTORY OFFICE </h2>
+                    </div>
+                </div>
+            </a>
+
+            <a href="crabble.html" class="group block cursor-pointer">
+                <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
+                    <img 
+                        src="images/crabble.jpg" 
+                        alt="crabble" 
+                        class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
+                        onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
+                    >
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-500"></div>
+                    
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <h2 class="text-white text-lg font-semibold tracking-widest uppercase text-center px-4">CRABBLE</h2>
+                    </div>
+                </div>
+            </a>
+
+            <a href="langfang master plan.html" class="group block cursor-pointer">
+                <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
+                    <img 
+                        src="images/langfang master plan.jpg" 
+                        alt="langfang master plan" 
+                        class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
+                        onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
+                    >
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-500"></div>
+                    
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <h2 class="text-white text-lg font-semibold tracking-widest uppercase text-center px-4">LANGFANG MASTER PLAN</h2>
+                    </div>
+                </div>
+            </a>
 
         </div>
 
@@ -298,44 +554,5 @@
             </div>
         </footer>
     </div>
-
-    <!-- Lightbox Modal -->
-    <div id="lightbox" class="fixed inset-0 z-[100] bg-white/95 flex justify-center items-center hidden" onclick="closeModal()">
-        <button class="absolute top-8 right-8 text-black hover:text-gray-600 focus:outline-none" onclick="closeModal()">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-        </button>
-        <div class="max-w-[90vw] max-h-[90vh]" onclick="event.stopPropagation()">
-            <img id="lightbox-img" src="" alt="Enlarged view" class="max-w-full max-h-[85vh] object-contain shadow-2xl">
-            <p id="lightbox-caption" class="text-center mt-4 text-xs tracking-widest uppercase text-gray-500"></p>
-        </div>
-    </div>
-
-    <script>
-        function openModal(imageSrc, title) {
-            const lightbox = document.getElementById('lightbox');
-            const img = document.getElementById('lightbox-img');
-            const caption = document.getElementById('lightbox-caption');
-            
-            img.src = imageSrc;
-            caption.textContent = title;
-            lightbox.classList.remove('hidden');
-            document.body.style.overflow = 'hidden'; // Prevent scrolling background
-        }
-
-        function closeModal() {
-            const lightbox = document.getElementById('lightbox');
-            lightbox.classList.add('hidden');
-            document.body.style.overflow = ''; // Restore scrolling
-        }
-
-        // Close on escape key
-        document.addEventListener('keydown', function(event) {
-            if (event.key === "Escape") {
-                closeModal();
-            }
-        });
-    </script>
 </body>
 </html>
