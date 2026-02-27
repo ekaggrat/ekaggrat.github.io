@@ -5,7 +5,6 @@ from datetime import datetime
 
 # --- CONFIGURATION ---
 IMAGE_FOLDER = 'images'  
-# The output filename is now derived from the script's parent directory
 ALLOWED_EXTENSIONS = {'.jpg', '.jpeg', '.png', '.webp', '.gif'}
 
 # --- HTML TEMPLATES ---
@@ -42,7 +41,22 @@ HTML_HEADER = """<!DOCTYPE html>
             [PROJECT_TITLE]
         </h1>
 
+        [YOUTUBE_EMBED]
+
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+"""
+
+YOUTUBE_TEMPLATE = """
+        <div class="w-full mb-12 aspect-video bg-gray-50 overflow-hidden">
+            <iframe 
+                class="w-full h-full"
+                src="https://www.youtube.com/embed/[VIDEO_ID]" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+            </iframe>
+        </div>
 """
 
 ITEM_TEMPLATE = """
@@ -154,6 +168,12 @@ MODAL_AND_JS = """
 </html>
 """
 
+def extract_youtube_id(url):
+    """Regex to pull the ID from various YouTube link formats."""
+    pattern = r'(?:v=|\/)([0-9A-Za-z_-]{11}).*'
+    match = re.search(pattern, url)
+    return match.group(1) if match else None
+
 def clean_filename(filename):
     name, _ = os.path.splitext(filename)
     clean = name.replace("-", " ").replace("_", " ")
@@ -165,22 +185,28 @@ def get_sort_key(filename):
     return int(match.group()) if match else float('inf')
 
 def generate_gallery():
-    # --- GET SCRIPT'S PARENT FOLDER NAME ---
-    # os.path.abspath(__file__) gets the full path of the script
-    # os.path.dirname gets the folder it's in
-    # os.path.basename gets the name of that folder
     script_dir = os.path.dirname(os.path.abspath(__file__))
     parent_folder_name = os.path.basename(script_dir)
     output_file = f"{parent_folder_name}.html"
 
     print(f"Detected project folder: {parent_folder_name}")
-    print(f"Scanning subfolder: {IMAGE_FOLDER}...")
     
     if not os.path.exists(IMAGE_FOLDER):
         print(f"Error: Subfolder '{IMAGE_FOLDER}' not found.")
         return
 
-    # 1. Grab text file for title and description
+    # 1. Handle YouTube Link
+    youtube_html = ""
+    yt_file_path = os.path.join(script_dir, 'youtube.txt')
+    if os.path.exists(yt_file_path):
+        with open(yt_file_path, 'r') as f:
+            url = f.read().strip()
+            video_id = extract_youtube_id(url)
+            if video_id:
+                youtube_html = YOUTUBE_TEMPLATE.replace("[VIDEO_ID]", video_id)
+                print(f"Adding YouTube video: {video_id}")
+
+    # 2. Grab text file for title and description
     txt_files = [f for f in os.listdir(IMAGE_FOLDER) if f.lower().endswith('.txt')]
     project_text = "No project description text file found."
     project_title = parent_folder_name.replace("-", " ").replace("_", " ").upper()
@@ -192,16 +218,15 @@ def generate_gallery():
         with open(text_file_path, 'r', encoding='utf-8') as tf:
             project_text = tf.read()
 
-    # 2. Grab images
+    # 3. Grab images
     files = [f for f in os.listdir(IMAGE_FOLDER) if os.path.splitext(f)[1].lower() in ALLOWED_EXTENSIONS and f.lower() != 'logo.png']
-    
     if not files:
         print("No images found in images subfolder.")
         return
 
     files.sort(key=get_sort_key)
 
-    # 3. Build HTML items
+    # 4. Build HTML items
     gallery_items = ""
     image_paths_for_js = []
     
@@ -215,8 +240,10 @@ def generate_gallery():
         item_html = item_html.replace("[INDEX]", str(index))
         gallery_items += item_html
 
-    # 4. Assemble full HTML
+    # 5. Assemble full HTML
     header_html = HTML_HEADER.replace("[PROJECT_TITLE]", project_title)
+    header_html = header_html.replace("[YOUTUBE_EMBED]", youtube_html) # Injecting video
+    
     footer_html = FOOTER_TEMPLATE.replace("[PROJECT_TEXT]", project_text)
     js_array_string = json.dumps(image_paths_for_js)
     modal_html = MODAL_AND_JS.replace("[IMAGE_ARRAY_JSON]", js_array_string)
@@ -226,7 +253,7 @@ def generate_gallery():
     with open(output_file, "w", encoding="utf-8") as f:
         f.write(full_html)
         
-    print(f"Success! Generated '{output_file}' with {len(files)} images.")
+    print(f"Success! Generated '{output_file}'.")
 
 if __name__ == "__main__":
     generate_gallery()
