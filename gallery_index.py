@@ -1,10 +1,9 @@
 import os
-import random
 from datetime import datetime
 
 # --- CONFIGURATION ---
-IMAGE_FOLDER = 'images'  # The folder to scan for images
-OUTPUT_FILE = 'index.html' # Changed from gallery.html to index.html
+IMAGE_FOLDER = 'images'  
+OUTPUT_FILE = 'index.html' 
 ALLOWED_EXTENSIONS = {'.jpg', '.jpeg', '.png', '.webp', '.gif'}
 
 # --- HTML TEMPLATES ---
@@ -32,9 +31,6 @@ HTML_HEADER = """<!DOCTYPE html>
         </div>
         <nav class="hidden md:flex space-x-8 text-xs font-medium tracking-widest uppercase text-gray-500">
             <a href="https://ekaggrat.com" class="hover:text-black transition-colors">Home</a>
-            <a href="#" class="hover:text-black transition-colors">Work</a>
-            <a href="#" class="hover:text-black transition-colors">Studio</a>
-            <a href="#" class="hover:text-black transition-colors">Contact</a>
         </nav>
     </header>
 
@@ -50,11 +46,11 @@ HTML_FOOTER = """
         </div>
 
         <footer class="mt-32 border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center text-[10px] tracking-widest uppercase text-gray-400">
-            <div>&copy; """ + str(datetime.now().year) + """ Ekaggrat Studio</div>
+            <div>&copy; {year} Ekaggrat Studio</div>
             <div class="mt-4 md:mt-0 space-x-6">
-                <a href="#" class="hover:text-black">Instagram</a>
-                <a href="#" class="hover:text-black">LinkedIn</a>
-                <a href="#" class="hover:text-black">Behance</a>
+                <a href="{insta_link}" target="_blank" class="hover:text-black">Instagram</a>
+                <a href="{linkedin_link}" target="_blank" class="hover:text-black">LinkedIn</a>
+                <a href="{hackaday_link}" target="_blank" class="hover:text-black">Hackaday</a>
             </div>
         </footer>
     </div>
@@ -62,13 +58,13 @@ HTML_FOOTER = """
 </html>
 """
 
-# HTML template with nested folder hyperlink structure
+# HTML template matching the exact basename for folders, links, and titles
 ITEM_TEMPLATE = """
-            <a href="{clean_name}/{clean_name}.html" class="group block cursor-pointer">
+            <a href="{basename}/{basename}.html" class="group block cursor-pointer">
                 <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
                         src="{filepath}" 
-                        alt="{clean_name}" 
+                        alt="{basename}" 
                         class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
                     >
@@ -81,12 +77,17 @@ ITEM_TEMPLATE = """
             </a>
 """
 
-def clean_filename(filename):
-    """Removes extensions and replaces separators with spaces."""
+def get_basename(filename):
+    """Simply returns the filename without the extension, applying no formatting."""
     name, _ = os.path.splitext(filename)
-    clean = name.replace("-", " ").replace("_", " ")
-    clean = clean.replace("(", " ").replace(")", "")
-    return clean
+    return name
+
+def get_social_link(filename):
+    """Reads a URL from a text file, returning '#' if it doesn't exist."""
+    if os.path.exists(filename):
+        with open(filename, 'r', encoding='utf-8') as f:
+            return f.read().strip()
+    return "#"
 
 def generate_gallery():
     print(f"Scanning folder: {IMAGE_FOLDER}...")
@@ -110,16 +111,29 @@ def generate_gallery():
     
     for filename in files:
         file_path = f"{IMAGE_FOLDER}/{filename}"
-        clean_name = clean_filename(filename)
-        title = clean_name.upper()
+        basename = get_basename(filename)
+        title = basename.upper()
         
         gallery_items += ITEM_TEMPLATE.format(
             filepath=file_path,
-            clean_name=clean_name,
+            basename=basename,
             title=title
         )
 
-    full_html = HTML_HEADER + gallery_items + HTML_FOOTER
+    # Grab the links for the footer
+    insta_link = get_social_link('instagram.txt')
+    linkedin_link = get_social_link('linkedin.txt')
+    hackaday_link = get_social_link('hackaday.txt')
+
+    # Format the footer with links and the current year
+    footer_html = HTML_FOOTER.format(
+        year=datetime.now().year,
+        insta_link=insta_link,
+        linkedin_link=linkedin_link,
+        hackaday_link=hackaday_link
+    )
+
+    full_html = HTML_HEADER + gallery_items + footer_html
     
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         f.write(full_html)
