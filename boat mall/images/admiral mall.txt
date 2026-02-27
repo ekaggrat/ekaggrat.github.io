@@ -1,0 +1,1 @@
+•	Admiral Mall (Nanning, China): The project involved a facade redesign for a 10-year-old mall. The client requested a facade that looked like a "ship floating in water." The complex shape was modeled in Rhino using Grasshopper scripts to create a facade of reflective stainless panels on top and "flowing water" made of glass and aluminum triangles at the bottom
