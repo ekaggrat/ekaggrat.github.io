@@ -1,0 +1,1 @@
+The scope of this project was to extend a existing retail block and to add a ne facade to it. The facade consists of simple bands varing in heights .
