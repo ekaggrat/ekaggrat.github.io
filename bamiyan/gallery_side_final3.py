@@ -5,7 +5,6 @@ from datetime import datetime
 
 # --- CONFIGURATION ---
 IMAGE_FOLDER = 'images'  
-# The output filename is now derived from the script's parent directory
 ALLOWED_EXTENSIONS = {'.jpg', '.jpeg', '.png', '.webp', '.gif'}
 
 # --- HTML TEMPLATES ---
@@ -66,9 +65,7 @@ FOOTER_TEMPLATE = """
             <p class="text-sm text-gray-600 leading-relaxed mb-12 whitespace-pre-wrap">[PROJECT_TEXT]</p>
             
             <h3 class="text-sm font-bold tracking-[0.2em] uppercase mb-4 text-gray-800">My Role</h3>
-            <p class="text-sm text-gray-600 leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
-            </p>
+            <p class="text-sm text-gray-600 leading-relaxed whitespace-pre-wrap">[MY_ROLE_TEXT]</p>
         </div>
 
         <footer class="mt-32 border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center text-[10px] tracking-widest uppercase text-gray-400">
@@ -165,10 +162,6 @@ def get_sort_key(filename):
     return int(match.group()) if match else float('inf')
 
 def generate_gallery():
-    # --- GET SCRIPT'S PARENT FOLDER NAME ---
-    # os.path.abspath(__file__) gets the full path of the script
-    # os.path.dirname gets the folder it's in
-    # os.path.basename gets the name of that folder
     script_dir = os.path.dirname(os.path.abspath(__file__))
     parent_folder_name = os.path.basename(script_dir)
     output_file = f"{parent_folder_name}.html"
@@ -181,7 +174,7 @@ def generate_gallery():
         return
 
     # 1. Grab text file for title and description
-    txt_files = [f for f in os.listdir(IMAGE_FOLDER) if f.lower().endswith('.txt')]
+    txt_files = [f for f in os.listdir(IMAGE_FOLDER) if f.lower().endswith('.txt') and f.lower() != 'myrole.txt']
     project_text = "No project description text file found."
     project_title = parent_folder_name.replace("-", " ").replace("_", " ").upper()
     
@@ -191,6 +184,13 @@ def generate_gallery():
         project_title = clean_filename(text_filename).upper()
         with open(text_file_path, 'r', encoding='utf-8') as tf:
             project_text = tf.read()
+
+    # --- NEW: Grab 'myrole.txt' for the Role section ---
+    my_role_text = "Role information not found."
+    role_file_path = os.path.join(IMAGE_FOLDER, 'myrole.txt')
+    if os.path.exists(role_file_path):
+        with open(role_file_path, 'r', encoding='utf-8') as rf:
+            my_role_text = rf.read()
 
     # 2. Grab images
     files = [f for f in os.listdir(IMAGE_FOLDER) if os.path.splitext(f)[1].lower() in ALLOWED_EXTENSIONS and f.lower() != 'logo.png']
@@ -217,7 +217,11 @@ def generate_gallery():
 
     # 4. Assemble full HTML
     header_html = HTML_HEADER.replace("[PROJECT_TITLE]", project_title)
+    
+    # Updated to handle both Project Text and My Role Text
     footer_html = FOOTER_TEMPLATE.replace("[PROJECT_TEXT]", project_text)
+    footer_html = footer_html.replace("[MY_ROLE_TEXT]", my_role_text)
+    
     js_array_string = json.dumps(image_paths_for_js)
     modal_html = MODAL_AND_JS.replace("[IMAGE_ARRAY_JSON]", js_array_string)
 
