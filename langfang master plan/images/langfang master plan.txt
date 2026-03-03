@@ -1,0 +1,3 @@
+The city of Langfang is a suburb of Beijing. The client requested a proposal for a master plan of a 2km x 2km area. The city master plan of the area consisted of 16 blocks each of 500m x 500m which could not be changed. Also some of the blocks had existing buildings which needed to be integrated into the master plan.
+
+To link all the blocks together a ring of green spaces passes through most of the blocks and the rest of the blocks have interconnected green strips.

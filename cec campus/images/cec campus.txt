@@ -1,0 +1,1 @@
+The exhibition center is a part of a big factory campus master plan. The long meandering building is actually 3 buildings covered in a exterior skin to unify them. The skin is a light weight steel structure with aluminum louvers fixed at varing angles to create a wavy pattern. The facade was generated parametically in grasshopper.
