@@ -1,0 +1,6 @@
+Inspired from the hair rubber band of my daughter I created a mechanical clock which stretches a flexible elastic borrowed from a flexible pen to make the digits. The arms are moved by cams which stretches the elastic band to make the digits. Each digit approximately measures 50mmx 55 mm. The entire clock is about 300 x 140 x 150mm
+The clock consists of  4 modules of digits paired in two units. Each pair is powered by  a 20mm geared stepper motor. Each pair has one module driven by the stepper motor and the second module is moved by a carryover mechanism.  Both the units are controlled by a control board in the base containing a atmega8 running in the arduino ecosystem.
+
+The base 
+
+It contains the control board which consists of a Atmega 8 and a pair of a4988 stepper drivers
