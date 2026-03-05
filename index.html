@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ekaggart Singh Kalsi - Selected Works</title>
+    <title>Ekaggrat Singh Kalsi</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;600&display=swap');
@@ -16,25 +16,32 @@
         <div class="flex items-center gap-4">
             <img src="images/logo.png" alt="Logo" class="h-6 w-auto object-contain">
             <div class="text-2xl font-semibold tracking-[0.2em] uppercase">
-                Ekaggart singh Kalsi
+                Ekaggrat Singh Kalsi
             </div>
         </div>
-        <nav class="hidden md:flex space-x-8 text-xs font-medium tracking-widest uppercase text-gray-500">
-            <a href="https://ekaggrat.com" class="hover:text-black transition-colors">Home</a>
+        <nav class="hidden md:flex space-x-8 text-xs font-medium tracking-widest uppercase text-gray-500 items-center">
+            <a href="https://www.instagram.com/mectolab" target="_blank" class="hover:text-black transition-colors">Instagram</a>
+            <a href="https://www.linkedin.com/in/ekaggrat-singh-kalsi-13330812/" target="_blank" class="hover:text-black transition-colors">LinkedIn</a>
+            <a href="https://hackaday.io/ekaggrat" target="_blank" class="hover:text-black transition-colors">Hackaday</a>
+            <a href="about/about.html" class="hover:text-black transition-colors">About</a>
         </nav>
     </header>
 
-    <div class="max-w-[1600px] mx-auto pt-32 pb-20 px-4 md:px-12">
-        <h1 class="text-xs font-bold tracking-[0.3em] uppercase text-gray-400 mb-12 text-center md:text-left">
-            Selected Works
-        </h1>
+    <div class="max-w-full mx-auto pt-32 pb-20 px-4 md:px-12">
         
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-3">
+        <div class="flex flex-wrap gap-6 mb-10 justify-center md:justify-start">
+            <button onclick="filterGallery('all')" class="text-xs font-bold tracking-widest uppercase text-black hover:text-gray-500 transition-colors">All</button>
+            <button onclick="filterGallery('architecture')" class="text-xs font-bold tracking-widest uppercase text-gray-400 hover:text-black transition-colors">Architecture</button>
+            <button onclick="filterGallery('interior')" class="text-xs font-bold tracking-widest uppercase text-gray-400 hover:text-black transition-colors">Interior</button>
+            <button onclick="filterGallery('products')" class="text-xs font-bold tracking-widest uppercase text-gray-400 hover:text-black transition-colors">Product</button>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-3" id="gallery-container">
 
-            <a href="patagonia/patagonia.html" class="group block cursor-pointer">
+            <a href="patagonia/patagonia.html" class="gallery-item interior group block cursor-pointer">
                 <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
-                        src="images/patagonia.jpg" 
+                        src="images/interior/patagonia.jpg" 
                         alt="patagonia" 
                         class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
@@ -47,10 +54,26 @@
                 </div>
             </a>
 
-            <a href="zuoling school/zuoling school.html" class="group block cursor-pointer">
+            <a href="ty research block/ty research block.html" class="gallery-item architecture group block cursor-pointer">
                 <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
-                        src="images/zuoling school.jpg" 
+                        src="images/architecture/ty research block.jpg" 
+                        alt="ty research block" 
+                        class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
+                        onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
+                    >
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-500"></div>
+                    
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <h2 class="text-white text-lg font-semibold tracking-widest uppercase text-center px-4">TY RESEARCH BLOCK</h2>
+                    </div>
+                </div>
+            </a>
+
+            <a href="zuoling school/zuoling school.html" class="gallery-item architecture group block cursor-pointer">
+                <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
+                    <img 
+                        src="images/architecture/zuoling school.jpg" 
                         alt="zuoling school" 
                         class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
@@ -63,10 +86,10 @@
                 </div>
             </a>
 
-            <a href="cz reception library/cz reception library.html" class="group block cursor-pointer">
+            <a href="cz reception library/cz reception library.html" class="gallery-item architecture group block cursor-pointer">
                 <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
-                        src="images/cz reception library.jpg" 
+                        src="images/architecture/cz reception library.jpg" 
                         alt="cz reception library" 
                         class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
@@ -79,10 +102,10 @@
                 </div>
             </a>
 
-            <a href="bezicron/bezicron.html" class="group block cursor-pointer">
+            <a href="bezicron/bezicron.html" class="gallery-item products group block cursor-pointer">
                 <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
-                        src="images/bezicron.jpg" 
+                        src="images/products/bezicron.jpg" 
                         alt="bezicron" 
                         class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
@@ -95,10 +118,10 @@
                 </div>
             </a>
 
-            <a href="ty gujian museum/ty gujian museum.html" class="group block cursor-pointer">
+            <a href="ty gujian museum/ty gujian museum.html" class="gallery-item architecture group block cursor-pointer">
                 <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
-                        src="images/ty gujian museum.jpg" 
+                        src="images/architecture/ty gujian museum.jpg" 
                         alt="ty gujian museum" 
                         class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
@@ -111,10 +134,10 @@
                 </div>
             </a>
 
-            <a href="cz retail facade/cz retail facade.html" class="group block cursor-pointer">
+            <a href="cz retail facade/cz retail facade.html" class="gallery-item architecture group block cursor-pointer">
                 <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
-                        src="images/cz retail facade.jpg" 
+                        src="images/architecture/cz retail facade.jpg" 
                         alt="cz retail facade" 
                         class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
@@ -127,10 +150,10 @@
                 </div>
             </a>
 
-            <a href="ty museum/ty museum.html" class="group block cursor-pointer">
+            <a href="ty museum/ty museum.html" class="gallery-item architecture group block cursor-pointer">
                 <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
-                        src="images/ty museum.jpg" 
+                        src="images/architecture/ty museum.jpg" 
                         alt="ty museum" 
                         class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
@@ -143,10 +166,10 @@
                 </div>
             </a>
 
-            <a href="cultural center/cultural center.html" class="group block cursor-pointer">
+            <a href="cultural center/cultural center.html" class="gallery-item architecture group block cursor-pointer">
                 <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
-                        src="images/cultural center.jpg" 
+                        src="images/architecture/cultural center.jpg" 
                         alt="cultural center" 
                         class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
@@ -159,10 +182,10 @@
                 </div>
             </a>
 
-            <a href="xy biocity/xy biocity.html" class="group block cursor-pointer">
+            <a href="xy biocity/xy biocity.html" class="gallery-item architecture group block cursor-pointer">
                 <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
-                        src="images/xy biocity.jpg" 
+                        src="images/architecture/xy biocity.jpg" 
                         alt="xy biocity" 
                         class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
@@ -175,10 +198,10 @@
                 </div>
             </a>
 
-            <a href="cloud facade/cloud facade.html" class="group block cursor-pointer">
+            <a href="cloud facade/cloud facade.html" class="gallery-item architecture group block cursor-pointer">
                 <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
-                        src="images/cloud facade.jpg" 
+                        src="images/architecture/cloud facade.jpg" 
                         alt="cloud facade" 
                         class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
@@ -191,10 +214,10 @@
                 </div>
             </a>
 
-            <a href="shenyang clubhouse/shenyang clubhouse.html" class="group block cursor-pointer">
+            <a href="shenyang clubhouse/shenyang clubhouse.html" class="gallery-item architecture group block cursor-pointer">
                 <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
-                        src="images/shenyang clubhouse.jpg" 
+                        src="images/architecture/shenyang clubhouse.jpg" 
                         alt="shenyang clubhouse" 
                         class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
@@ -207,10 +230,10 @@
                 </div>
             </a>
 
-            <a href="eptaora/eptaora.html" class="group block cursor-pointer">
+            <a href="eptaora/eptaora.html" class="gallery-item products group block cursor-pointer">
                 <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
-                        src="images/eptaora.jpg" 
+                        src="images/products/eptaora.jpg" 
                         alt="eptaora" 
                         class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
@@ -223,10 +246,10 @@
                 </div>
             </a>
 
-            <a href="cec campus/cec campus.html" class="group block cursor-pointer">
+            <a href="cec campus/cec campus.html" class="gallery-item architecture group block cursor-pointer">
                 <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
-                        src="images/cec campus.jpg" 
+                        src="images/architecture/cec campus.jpg" 
                         alt="cec campus" 
                         class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
@@ -239,10 +262,10 @@
                 </div>
             </a>
 
-            <a href="acrobat clock/acrobat clock.html" class="group block cursor-pointer">
+            <a href="acrobat clock/acrobat clock.html" class="gallery-item products group block cursor-pointer">
                 <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
-                        src="images/acrobat clock.JPG" 
+                        src="images/products/acrobat clock.JPG" 
                         alt="acrobat clock" 
                         class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
@@ -255,10 +278,10 @@
                 </div>
             </a>
 
-            <a href="getula/getula.html" class="group block cursor-pointer">
+            <a href="getula/getula.html" class="gallery-item products group block cursor-pointer">
                 <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
-                        src="images/getula.jpg" 
+                        src="images/products/getula.jpg" 
                         alt="getula" 
                         class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
@@ -271,10 +294,10 @@
                 </div>
             </a>
 
-            <a href="biolake qianyan/biolake qianyan.html" class="group block cursor-pointer">
+            <a href="biolake qianyan/biolake qianyan.html" class="gallery-item architecture group block cursor-pointer">
                 <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
-                        src="images/biolake qianyan.jpg" 
+                        src="images/architecture/biolake qianyan.jpg" 
                         alt="biolake qianyan" 
                         class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
@@ -287,10 +310,10 @@
                 </div>
             </a>
 
-            <a href="tj cec office/tj cec office.html" class="group block cursor-pointer">
+            <a href="tj cec office/tj cec office.html" class="gallery-item architecture group block cursor-pointer">
                 <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
-                        src="images/tj cec office.jpg" 
+                        src="images/architecture/tj cec office.jpg" 
                         alt="tj cec office" 
                         class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
@@ -303,10 +326,10 @@
                 </div>
             </a>
 
-            <a href="baotao/baotao.html" class="group block cursor-pointer">
+            <a href="baotao/baotao.html" class="gallery-item architecture group block cursor-pointer">
                 <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
-                        src="images/baotao.jpg" 
+                        src="images/architecture/baotao.jpg" 
                         alt="baotao" 
                         class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
@@ -319,10 +342,10 @@
                 </div>
             </a>
 
-            <a href="gungzhuo bus station/gungzhuo bus station.html" class="group block cursor-pointer">
+            <a href="gungzhuo bus station/gungzhuo bus station.html" class="gallery-item architecture group block cursor-pointer">
                 <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
-                        src="images/gungzhuo bus station.jpg" 
+                        src="images/architecture/gungzhuo bus station.jpg" 
                         alt="gungzhuo bus station" 
                         class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
@@ -335,10 +358,10 @@
                 </div>
             </a>
 
-            <a href="sequino/sequino.html" class="group block cursor-pointer">
+            <a href="sequino/sequino.html" class="gallery-item products group block cursor-pointer">
                 <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
-                        src="images/sequino.jpg" 
+                        src="images/products/sequino.jpg" 
                         alt="sequino" 
                         class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
@@ -351,10 +374,10 @@
                 </div>
             </a>
 
-            <a href="decathalon/decathalon.html" class="group block cursor-pointer">
+            <a href="decathalon/decathalon.html" class="gallery-item architecture group block cursor-pointer">
                 <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
-                        src="images/decathalon.jpg" 
+                        src="images/architecture/decathalon.jpg" 
                         alt="decathalon" 
                         class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
@@ -367,10 +390,10 @@
                 </div>
             </a>
 
-            <a href="scafolding facade/scafolding facade.html" class="group block cursor-pointer">
+            <a href="scafolding facade/scafolding facade.html" class="gallery-item architecture group block cursor-pointer">
                 <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
-                        src="images/scafolding facade.jpg" 
+                        src="images/architecture/scafolding facade.jpg" 
                         alt="scafolding facade" 
                         class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
@@ -383,10 +406,10 @@
                 </div>
             </a>
 
-            <a href="wuhan biolake/wuhan biolake.html" class="group block cursor-pointer">
+            <a href="wuhan biolake/wuhan biolake.html" class="gallery-item architecture group block cursor-pointer">
                 <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
-                        src="images/wuhan biolake.jpg" 
+                        src="images/architecture/wuhan biolake.jpg" 
                         alt="wuhan biolake" 
                         class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
@@ -399,10 +422,10 @@
                 </div>
             </a>
 
-            <a href="factory sports center/factory sports center.html" class="group block cursor-pointer">
+            <a href="factory sports center/factory sports center.html" class="gallery-item architecture group block cursor-pointer">
                 <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
-                        src="images/factory sports center.jpg" 
+                        src="images/architecture/factory sports center.jpg" 
                         alt="factory sports center" 
                         class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
@@ -415,10 +438,10 @@
                 </div>
             </a>
 
-            <a href="sliced light/sliced light.html" class="group block cursor-pointer">
+            <a href="sliced light/sliced light.html" class="gallery-item architecture group block cursor-pointer">
                 <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
-                        src="images/sliced light.jpg" 
+                        src="images/architecture/sliced light.jpg" 
                         alt="sliced light" 
                         class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
@@ -431,10 +454,10 @@
                 </div>
             </a>
 
-            <a href="vlink mall/vlink mall.html" class="group block cursor-pointer">
+            <a href="vlink mall/vlink mall.html" class="gallery-item architecture group block cursor-pointer">
                 <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
-                        src="images/vlink mall.jpg" 
+                        src="images/architecture/vlink mall.jpg" 
                         alt="vlink mall" 
                         class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
@@ -447,10 +470,10 @@
                 </div>
             </a>
 
-            <a href="entrance gate/entrance gate.html" class="group block cursor-pointer">
+            <a href="entrance gate/entrance gate.html" class="gallery-item architecture group block cursor-pointer">
                 <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
-                        src="images/entrance gate.jpg" 
+                        src="images/architecture/entrance gate.jpg" 
                         alt="entrance gate" 
                         class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
@@ -463,10 +486,10 @@
                 </div>
             </a>
 
-            <a href="ski resort/ski resort.html" class="group block cursor-pointer">
+            <a href="ski resort/ski resort.html" class="gallery-item architecture group block cursor-pointer">
                 <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
-                        src="images/ski resort.jpg" 
+                        src="images/architecture/ski resort.jpg" 
                         alt="ski resort" 
                         class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
@@ -479,10 +502,10 @@
                 </div>
             </a>
 
-            <a href="zebra office/zebra office.html" class="group block cursor-pointer">
+            <a href="zebra office/zebra office.html" class="gallery-item interior group block cursor-pointer">
                 <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
-                        src="images/zebra office.jpg" 
+                        src="images/interior/zebra office.jpg" 
                         alt="zebra office" 
                         class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
@@ -495,10 +518,10 @@
                 </div>
             </a>
 
-            <a href="wuhan masterplan/wuhan masterplan.html" class="group block cursor-pointer">
+            <a href="wuhan masterplan/wuhan masterplan.html" class="gallery-item architecture group block cursor-pointer">
                 <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
-                        src="images/wuhan masterplan.jpg" 
+                        src="images/architecture/wuhan masterplan.jpg" 
                         alt="wuhan masterplan" 
                         class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
@@ -511,10 +534,10 @@
                 </div>
             </a>
 
-            <a href="traffic office/traffic office.html" class="group block cursor-pointer">
+            <a href="traffic office/traffic office.html" class="gallery-item architecture group block cursor-pointer">
                 <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
-                        src="images/traffic office.jpg" 
+                        src="images/architecture/traffic office.jpg" 
                         alt="traffic office" 
                         class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
@@ -527,10 +550,10 @@
                 </div>
             </a>
 
-            <a href="gas station/gas station.html" class="group block cursor-pointer">
+            <a href="gas station/gas station.html" class="gallery-item architecture group block cursor-pointer">
                 <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
-                        src="images/gas station.jpg" 
+                        src="images/architecture/gas station.jpg" 
                         alt="gas station" 
                         class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
@@ -543,10 +566,10 @@
                 </div>
             </a>
 
-            <a href="outdoor cafe/outdoor cafe.html" class="group block cursor-pointer">
+            <a href="outdoor cafe/outdoor cafe.html" class="gallery-item architecture group block cursor-pointer">
                 <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
-                        src="images/outdoor cafe.jpg" 
+                        src="images/architecture/outdoor cafe.jpg" 
                         alt="outdoor cafe" 
                         class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
@@ -559,10 +582,10 @@
                 </div>
             </a>
 
-            <a href="edgytokie/edgytokie.html" class="group block cursor-pointer">
+            <a href="edgytokie/edgytokie.html" class="gallery-item architecture group block cursor-pointer">
                 <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
-                        src="images/edgytokie.jpg" 
+                        src="images/architecture/edgytokie.jpg" 
                         alt="edgytokie" 
                         class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
@@ -575,10 +598,10 @@
                 </div>
             </a>
 
-            <a href="doodle 2/doodle 2.html" class="group block cursor-pointer">
+            <a href="doodle 2/doodle 2.html" class="gallery-item products group block cursor-pointer">
                 <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
-                        src="images/doodle 2.jpg" 
+                        src="images/products/doodle 2.jpg" 
                         alt="doodle 2" 
                         class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
@@ -591,10 +614,10 @@
                 </div>
             </a>
 
-            <a href="torlo/torlo.html" class="group block cursor-pointer">
+            <a href="torlo/torlo.html" class="gallery-item products group block cursor-pointer">
                 <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
-                        src="images/torlo.jpg" 
+                        src="images/products/torlo.jpg" 
                         alt="torlo" 
                         class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
@@ -607,10 +630,10 @@
                 </div>
             </a>
 
-            <a href="tysa/tysa.html" class="group block cursor-pointer">
+            <a href="tysa/tysa.html" class="gallery-item architecture group block cursor-pointer">
                 <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
-                        src="images/tysa.jpg" 
+                        src="images/architecture/tysa.jpg" 
                         alt="tysa" 
                         class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
@@ -623,10 +646,10 @@
                 </div>
             </a>
 
-            <a href="bamiyan/bamiyan.html" class="group block cursor-pointer">
+            <a href="bamiyan/bamiyan.html" class="gallery-item architecture group block cursor-pointer">
                 <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
-                        src="images/bamiyan.jpg" 
+                        src="images/architecture/bamiyan.jpg" 
                         alt="bamiyan" 
                         class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
@@ -639,10 +662,10 @@
                 </div>
             </a>
 
-            <a href="yuanguan/yuanguan.html" class="group block cursor-pointer">
+            <a href="yuanguan/yuanguan.html" class="gallery-item architecture group block cursor-pointer">
                 <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
-                        src="images/yuanguan.jpg" 
+                        src="images/architecture/yuanguan.jpg" 
                         alt="yuanguan" 
                         class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
@@ -655,10 +678,10 @@
                 </div>
             </a>
 
-            <a href="precast factory  /precast factory  .html" class="group block cursor-pointer">
+            <a href="precast factory  /precast factory  .html" class="gallery-item architecture group block cursor-pointer">
                 <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
-                        src="images/precast factory  .jpg" 
+                        src="images/architecture/precast factory  .jpg" 
                         alt="precast factory  " 
                         class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
@@ -671,10 +694,10 @@
                 </div>
             </a>
 
-            <a href="boat mall/boat mall.html" class="group block cursor-pointer">
+            <a href="boat mall/boat mall.html" class="gallery-item architecture group block cursor-pointer">
                 <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
-                        src="images/boat mall.jpg" 
+                        src="images/architecture/boat mall.jpg" 
                         alt="boat mall" 
                         class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
@@ -687,10 +710,10 @@
                 </div>
             </a>
 
-            <a href="holo clock/holo clock.html" class="group block cursor-pointer">
+            <a href="holo clock/holo clock.html" class="gallery-item products group block cursor-pointer">
                 <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
-                        src="images/holo clock.JPG" 
+                        src="images/products/holo clock.JPG" 
                         alt="holo clock" 
                         class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
@@ -703,10 +726,10 @@
                 </div>
             </a>
 
-            <a href="taiyuan mall/taiyuan mall.html" class="group block cursor-pointer">
+            <a href="taiyuan mall/taiyuan mall.html" class="gallery-item architecture group block cursor-pointer">
                 <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
-                        src="images/taiyuan mall.jpg" 
+                        src="images/architecture/taiyuan mall.jpg" 
                         alt="taiyuan mall" 
                         class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
@@ -719,10 +742,10 @@
                 </div>
             </a>
 
-            <a href="crabble/crabble.html" class="group block cursor-pointer">
+            <a href="crabble/crabble.html" class="gallery-item products group block cursor-pointer">
                 <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
-                        src="images/crabble.jpg" 
+                        src="images/products/crabble.jpg" 
                         alt="crabble" 
                         class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
@@ -735,10 +758,10 @@
                 </div>
             </a>
 
-            <a href="langfang master plan/langfang master plan.html" class="group block cursor-pointer">
+            <a href="langfang master plan/langfang master plan.html" class="gallery-item architecture group block cursor-pointer">
                 <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
-                        src="images/langfang master plan.jpg" 
+                        src="images/architecture/langfang master plan.jpg" 
                         alt="langfang master plan" 
                         class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
@@ -751,10 +774,10 @@
                 </div>
             </a>
 
-            <a href="quindao reception center/quindao reception center.html" class="group block cursor-pointer">
+            <a href="quindao reception center/quindao reception center.html" class="gallery-item architecture group block cursor-pointer">
                 <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
-                        src="images/quindao reception center.jpg" 
+                        src="images/architecture/quindao reception center.jpg" 
                         alt="quindao reception center" 
                         class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
@@ -767,10 +790,10 @@
                 </div>
             </a>
 
-            <a href="zephyr reception/zephyr reception.html" class="group block cursor-pointer">
+            <a href="zephyr reception/zephyr reception.html" class="gallery-item interior group block cursor-pointer">
                 <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
-                        src="images/zephyr reception.jpg" 
+                        src="images/interior/zephyr reception.jpg" 
                         alt="zephyr reception" 
                         class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
@@ -783,10 +806,10 @@
                 </div>
             </a>
 
-            <a href="tian office/tian office.html" class="group block cursor-pointer">
+            <a href="tian office/tian office.html" class="gallery-item architecture group block cursor-pointer">
                 <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
-                        src="images/tian office.jpg" 
+                        src="images/architecture/tian office.jpg" 
                         alt="tian office" 
                         class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
@@ -799,10 +822,10 @@
                 </div>
             </a>
 
-            <a href="eco center/eco center.html" class="group block cursor-pointer">
+            <a href="eco center/eco center.html" class="gallery-item architecture group block cursor-pointer">
                 <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
-                        src="images/eco center.jpg" 
+                        src="images/architecture/eco center.jpg" 
                         alt="eco center" 
                         class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
@@ -815,10 +838,10 @@
                 </div>
             </a>
 
-            <a href="doodle 1/doodle 1.html" class="group block cursor-pointer">
+            <a href="doodle 1/doodle 1.html" class="gallery-item products group block cursor-pointer">
                 <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
-                        src="images/doodle 1.jpg" 
+                        src="images/products/doodle 1.jpg" 
                         alt="doodle 1" 
                         class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
@@ -831,10 +854,26 @@
                 </div>
             </a>
 
-            <a href="shivalik/shivalik.html" class="group block cursor-pointer">
+            <a href="spider table/spider table.html" class="gallery-item products group block cursor-pointer">
                 <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
-                        src="images/shivalik.jpg" 
+                        src="images/products/spider table.jpg" 
+                        alt="spider table" 
+                        class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
+                        onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
+                    >
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-500"></div>
+                    
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <h2 class="text-white text-lg font-semibold tracking-widest uppercase text-center px-4">SPIDER TABLE</h2>
+                    </div>
+                </div>
+            </a>
+
+            <a href="shivalik/shivalik.html" class="gallery-item architecture group block cursor-pointer">
+                <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
+                    <img 
+                        src="images/architecture/shivalik.jpg" 
                         alt="shivalik" 
                         class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
@@ -847,10 +886,10 @@
                 </div>
             </a>
 
-            <a href="bio office/bio office.html" class="group block cursor-pointer">
+            <a href="bio office/bio office.html" class="gallery-item architecture group block cursor-pointer">
                 <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
-                        src="images/bio office.jpg" 
+                        src="images/architecture/bio office.jpg" 
                         alt="bio office" 
                         class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
@@ -863,10 +902,58 @@
                 </div>
             </a>
 
-            <a href="grasshopper/grasshopper.html" class="group block cursor-pointer">
+            <a href="mike/mike.html" class="gallery-item products group block cursor-pointer">
                 <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
-                        src="images/grasshopper.jpg" 
+                        src="images/products/mike.jpg" 
+                        alt="mike" 
+                        class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
+                        onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
+                    >
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-500"></div>
+                    
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <h2 class="text-white text-lg font-semibold tracking-widest uppercase text-center px-4">MIKE</h2>
+                    </div>
+                </div>
+            </a>
+
+            <a href="container house/container house.html" class="gallery-item architecture group block cursor-pointer">
+                <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
+                    <img 
+                        src="images/architecture/container house.jpg" 
+                        alt="container house" 
+                        class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
+                        onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
+                    >
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-500"></div>
+                    
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <h2 class="text-white text-lg font-semibold tracking-widest uppercase text-center px-4">CONTAINER HOUSE</h2>
+                    </div>
+                </div>
+            </a>
+
+            <a href="pen drive/pen drive.html" class="gallery-item products group block cursor-pointer">
+                <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
+                    <img 
+                        src="images/products/pen drive.jpg" 
+                        alt="pen drive" 
+                        class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
+                        onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
+                    >
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-500"></div>
+                    
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <h2 class="text-white text-lg font-semibold tracking-widest uppercase text-center px-4">PEN DRIVE</h2>
+                    </div>
+                </div>
+            </a>
+
+            <a href="grasshopper/grasshopper.html" class="gallery-item products group block cursor-pointer">
+                <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
+                    <img 
+                        src="images/products/grasshopper.jpg" 
                         alt="grasshopper" 
                         class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
@@ -879,16 +966,57 @@
                 </div>
             </a>
 
+            <a href="pizza hut/pizza hut.html" class="gallery-item interior group block cursor-pointer">
+                <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
+                    <img 
+                        src="images/interior/pizza hut.jpg" 
+                        alt="pizza hut" 
+                        class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
+                        onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
+                    >
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-500"></div>
+                    
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <h2 class="text-white text-lg font-semibold tracking-widest uppercase text-center px-4">PIZZA HUT</h2>
+                    </div>
+                </div>
+            </a>
+
+            <a href="caterpillar/caterpillar.html" class="gallery-item products group block cursor-pointer">
+                <div class="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
+                    <img 
+                        src="images/products/caterpillar.jpg" 
+                        alt="caterpillar" 
+                        class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:-translate-y-12"
+                        onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
+                    >
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-500"></div>
+                    
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <h2 class="text-white text-lg font-semibold tracking-widest uppercase text-center px-4">CATERPILLAR</h2>
+                    </div>
+                </div>
+            </a>
+
         </div>
 
-        <footer class="mt-32 border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center text-[10px] tracking-widest uppercase text-gray-400">
+        <footer class="mt-32 border-t border-gray-200 pt-8 flex justify-center items-center text-[10px] tracking-widest uppercase text-gray-400">
             <div>&copy; 2026 Ekaggrat Studio</div>
-            <div class="mt-4 md:mt-0 space-x-6">
-                <a href="#" target="_blank" class="hover:text-black">Instagram</a>
-                <a href="#" target="_blank" class="hover:text-black">LinkedIn</a>
-                <a href="#" target="_blank" class="hover:text-black">Hackaday</a>
-            </div>
         </footer>
     </div>
+
+    <script>
+        function filterGallery(category) {
+            const items = document.querySelectorAll('.gallery-item');
+            
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.classList.remove('hidden');
+                } else {
+                    item.classList.add('hidden');
+                }
+            });
+        }
+    </script>
 </body>
 </html>
