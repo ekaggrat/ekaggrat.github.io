@@ -6,9 +6,7 @@ from datetime import datetime
 # --- CONFIGURATION ---
 IMAGE_FOLDER = 'images'  
 ALLOWED_EXTENSIONS = {'.jpg', '.jpeg', '.png', '.webp', '.gif'}
-PAGE_MARGIN = '20vw' 
-
-# --- HTML TEMPLATES ---
+PAGE_MARGIN = '0' 
 
 # --- HTML TEMPLATES ---
 HTML_HEADER = """<!DOCTYPE html>
@@ -19,52 +17,41 @@ HTML_HEADER = """<!DOCTYPE html>
     <title>[PROJECT_TITLE] - EKAGGRAT</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;600&display=swap');
-        body { font-family: 'Manrope', sans-serif; }
-        .snap-container {
-            scroll-snap-type: y mandatory;
-        overflow-y: scroll;
-        /* Subtract 100px (or your header's height) from the full viewport height */
-        height: calc(100vh - 100px); 
-        margin-top: 100px;
-        }
-        .snap-item {
-            scroll-snap-align: start;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        img {
-        image-rendering: -webkit-optimize-contrast;
-        image-rendering: crisp-edges;
+    *, *::before, *::after {
+        box-sizing: border-box;
     }
-    </style>
+    .snap-container {
+        scroll-snap-type: y mandatory;
+        overflow-y: scroll;
+        height: 100vh;
+        width: 100vw;
+        background-color: #ffffff;
+    }
+    .snap-item {
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+        height: 100vh;
+        width: 100vw;
+        display: flex !important; /* Force flex layout over Tailwind overrides */
+        align-items: center;    
+        justify-content: center; 
+        padding: 16px;          /* Consistent 16px margin around the edges */
+        overflow: hidden;
+    }
+</style>
 </head>
-<body class="bg-white text-black overflow-hidden">
-    
-    <header class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-sm z-50 py-6 px-8 flex justify-between items-center border-b border-gray-100">
-        <div class="flex items-center gap-4">
-            <img src="images/logo.png" alt="Logo" class="h-5 w-auto object-contain">
-            <div class="text-lg font-semibold tracking-[0.2em] uppercase">
-                Ekaggart Singh Kalsi
-            </div>
-        </div>
-        <nav class="flex space-x-8 text-xs font-medium tracking-widest uppercase text-gray-500">
-            <a href="https://ekaggrat.com" class="hover:text-black transition-colors">Home</a>
-        </nav>
-    </header>
+<body class="bg-white text-black m-0 p-0 overflow-hidden">
 
-    <main class="snap-container pt-120" style="padding-left: [PAGE_MARGIN]; padding-right: [PAGE_MARGIN];">
+    <main class="snap-container" style="padding-left: [PAGE_MARGIN]; padding-right: [PAGE_MARGIN];">
 """
 
 ITEM_TEMPLATE = """
-            <div class="snap-item group block cursor-pointer w-full" onclick="openModal([INDEX])">
-                <div class="relative w-full max-h-[80vh] aspect-[4/3] overflow-hidden bg-gray-100 shadow-lg">
+            <div class="snap-item group cursor-pointer" onclick="openModal([INDEX])">
+                <div class="w-full h-full flex items-center justify-center bg-white overflow-hidden">
                     <img 
                         src="[FILEPATH]" 
                         alt="[CLEAN_NAME]" 
-                        class="w-full h-full object-contain"
+                        class="max-w-full max-h-full object-contain"
                         onerror="this.onerror=null; this.src='https://placehold.co/640x480/f3f3f3/333?text=IMAGE+NOT+FOUND';"
                     >
                 </div>
@@ -72,25 +59,27 @@ ITEM_TEMPLATE = """
 """
 
 YOUTUBE_TEMPLATE = """
-            <div class="snap-item w-full flex items-center justify-center p-6">
-    <div class="w-full aspect-video bg-gray-50">
-        <iframe 
-            class="w-full h-full" 
-            src="https://www.youtube.com/embed/VIDEO_ID" 
-            title="YouTube video player" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            referrerpolicy="strict-origin-when-cross-origin" 
-            allowfullscreen>
-        </iframe>
-    </div>
-</div>
+            <div class="snap-item">
+                <div class="w-full h-full flex items-center justify-center bg-white p-6">
+                    <div class="w-full aspect-video max-h-full bg-gray-50">
+                        <iframe 
+                            class="w-full h-full" 
+                            src="https://www.youtube.com/embed/VIDEO_ID" 
+                            title="YouTube video player" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
 """
 
 FOOTER_TEMPLATE = """
         </div>
 
-        <div class="mt-24 max-w-4xl mx-auto">
+        <div class="mt-24 max-w-4xl mx-auto px-6">
             <h2 class="text-xl font-bold tracking-[0.2em] uppercase mb-6">Description</h2>
             <p class="text-sm text-gray-600 leading-relaxed mb-12 whitespace-pre-wrap">[PROJECT_TEXT]</p>
             
@@ -98,7 +87,7 @@ FOOTER_TEMPLATE = """
             <p class="text-sm text-gray-600 leading-relaxed whitespace-pre-wrap">[MY_ROLE_TEXT]</p>
         </div>
 
-        <footer class="mt-32 border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center text-[10px] tracking-widest uppercase text-gray-400">
+        <footer class="mt-32 border-t border-gray-200 pt-8 pb-12 mx-auto max-w-4xl px-6 flex flex-col md:flex-row justify-between items-center text-[10px] tracking-widest uppercase text-gray-400">
             <div>&copy; """ + str(datetime.now().year) + """ Ekaggrat Studio</div>
             <div class="mt-4 md:mt-0 space-x-6">
                 <a href="#" class="hover:text-black">Instagram</a>
@@ -139,13 +128,13 @@ MODAL_AND_JS = """
         const images = [IMAGE_ARRAY_JSON];
         let currentIndex = 0;
 
+        // ... Keep existing modal javascript functions unchanged ...
         function openModal(index) {
             currentIndex = index;
             const lightbox = document.getElementById('lightbox');
             const img = document.getElementById('lightbox-img');
             img.src = images[currentIndex];
             lightbox.classList.remove('hidden');
-            // Small timeout to allow transition to trigger
             requestAnimationFrame(() => { 
                 lightbox.classList.remove('opacity-0'); 
             });
@@ -242,9 +231,7 @@ def generate_gallery():
         if (index + 1) % 3 == 0:
             gallery_items += YOUTUBE_TEMPLATE
 
-    # 4. Assemble full HTML
     header_html = HTML_HEADER.replace("[PAGE_MARGIN]", PAGE_MARGIN)
-    # Note: We removed [PROJECT_TITLE] from the body, but kept it in the <title> tag
     header_html = header_html.replace("[PROJECT_TITLE]", project_title)
     
     footer_html = FOOTER_TEMPLATE.replace("[PROJECT_TEXT]", project_text)
@@ -252,8 +239,6 @@ def generate_gallery():
     
     js_array_string = json.dumps(image_paths_for_js)
     modal_html = MODAL_AND_JS.replace("[IMAGE_ARRAY_JSON]", js_array_string)
-
-    full_html = header_html + gallery_items + footer_html + modal_html
 
     with open(output_file, "w", encoding="utf-8") as f:
         f.write(header_html + gallery_items + footer_html + modal_html)

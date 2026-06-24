@@ -19,43 +19,33 @@ HTML_HEADER = """<!DOCTYPE html>
     <title>[PROJECT_TITLE] - EKAGGRAT</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;600&display=swap');
-        body { font-family: 'Manrope', sans-serif; }
-        .snap-container {
-            scroll-snap-type: y mandatory;
+    /* ... rest of your styles ... */
+    .snap-container {
+        scroll-snap-type: y mandatory;
         overflow-y: scroll;
-        /* Subtract 100px (or your header's height) from the full viewport height */
-        height: calc(100vh - 100px); 
-        margin-top: 100px;
-        }
-        .snap-item {
-            scroll-snap-align: start;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        img {
-        image-rendering: -webkit-optimize-contrast;
-        image-rendering: crisp-edges;
+        height: 100vh;
+        width: 100vw;
     }
-    </style>
+    .snap-item {
+        scroll-snap-align: start;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;    /* Vertically centers the image */
+        justify-content: center; /* Horizontally centers the image */
+        padding: 40px;          /* Adds space so it doesn't stick to edges */
+    }
+    img {
+        max-height: 100vh;
+        max-width: 100vw;
+        
+        object-fit: fill;
+    }
+</style>
 </head>
-<body class="bg-white text-black overflow-hidden">
-    
-    <header class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-sm z-50 py-6 px-8 flex justify-between items-center border-b border-gray-100">
-        <div class="flex items-center gap-4">
-            <img src="images/logo.png" alt="Logo" class="h-5 w-auto object-contain">
-            <div class="text-lg font-semibold tracking-[0.2em] uppercase">
-                Ekaggart Singh Kalsi
-            </div>
-        </div>
-        <nav class="flex space-x-8 text-xs font-medium tracking-widest uppercase text-gray-500">
-            <a href="https://ekaggrat.com" class="hover:text-black transition-colors">Home</a>
-        </nav>
-    </header>
+<body class="bg-white text-black">
 
-    <main class="snap-container pt-120" style="padding-left: [PAGE_MARGIN]; padding-right: [PAGE_MARGIN];">
+    <main class="snap-container" style="padding-left: [PAGE_MARGIN]; padding-right: [PAGE_MARGIN];">
 """
 
 ITEM_TEMPLATE = """
