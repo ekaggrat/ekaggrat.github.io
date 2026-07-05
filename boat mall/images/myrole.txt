@@ -1,0 +1,1 @@
+My role in this project was the concept modelling of the facade and developing the grasshopper cript to generate the facade panelling and then making the basic facade paneling drawings

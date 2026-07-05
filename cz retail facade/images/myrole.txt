@@ -1,0 +1,1 @@
+My role in the project was to design the facade and develop the panelization of the facade.

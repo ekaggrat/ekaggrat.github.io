@@ -1,0 +1,3 @@
+this is a simple clock based on a single geared stepper motor which i found in surplus 10 for a dollar... The motor is basically a 1:30 geared motor working at 12v with a 3mm shaft. The single motor is driven by a attiny2313 and uln2803 circuit with the code written in arduino ide. The single motor moves a gear train which in turn moves the minute ring and hour ring. The attiny pulses the motor every minute to move the minute wheel and the hour wheel
+The driver board of the clock is based on a attiny2313 and a uln2803 .The attiny is programmed using the arduino ide and a arduino as the programmer. The driver board turns on the motor every minute and turns the minute ring by one minute and then turns off.. This keeps the clock very silent.
+

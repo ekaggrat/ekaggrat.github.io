@@ -1,1 +1,3 @@
-The Xilk hotel is conceived as a 500-key hotel for a developer in Wuhan, Central China. The complex consists of a 3-star hotel and an office block with other supporting functions. The site of the project is a very long rectangle. Hence the hotel block was spread across the site and kept low in height to take advantage of this long site."
+The Xilk hotel is concieved as a 500 key hotel for a developer in Wuhan, Centeral China. The complex consists of a 3 star hotel and a office block with other supporting functions.
+
+The site of the project is very long rectangle. Hence the hotel block was spread accross the site and kept low in height to take advantage of this long site. The hotel block consists of two bars meandering in and out to enclose two courtyards. The front low bar consists of all the support functions and the the tall bar behind consists of the hotel rooms giving them maximum view
