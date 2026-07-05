@@ -181,8 +181,8 @@ def get_sort_key(filename):
     return int(match.group()) if match else float('inf')
 
 def extract_youtube_id(url):
-    """Extracts the 11-character YouTube video ID from various URL formats."""
-    match = re.search(r'(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/\s]{11})', url)
+    """Extracts the 11-character YouTube video ID from almost any URL format."""
+    match = re.search(r'(?:v=|\/)([0-9A-Za-z_-]{11})(?:\?|&|\/|$)', url)
     return match.group(1) if match else url.strip()
 
 def generate_gallery():
